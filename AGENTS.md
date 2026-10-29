@@ -84,6 +84,10 @@ learner to run them.
    and the reply is `{"toolResult": {"toolUseId", "status", "content": [{"text": ...}]}}`.
    `AgentResult` has no `.message` or `.metrics`; read the trace from `agent.messages`.
    `lesson_02_tools.py::ask()` is a working reference implementation.
+   *(correction 2026-10-30, re-verified on the installed 1.57.0: `AgentResult` now has
+   `dataclass` fields `stop_reason, message, metrics, state, interrupts, structured_output,
+   checkpoint` — the trace-from-`agent.messages` advice is still the practical one, but the
+   "no .message/.metrics" claim is stale.)*
 
 ## Curriculum roadmap
 
